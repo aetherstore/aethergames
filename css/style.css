@@ -13,3 +13,16 @@
   border-radius: 25px; /* Rounded corners */
   font-size: 18px; /* Increase font size */
 }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  border-bottom: 1px solid #1E90FF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
