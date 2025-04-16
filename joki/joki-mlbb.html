@@ -89,8 +89,8 @@
 
 <!--BADGE-->
 <div class="text-center">
-<img src="/img/verif.gif" style="height: 15px; margin-right: 5px; margin-bottom: 2px"><span class="wa">Dikerjakan Oleh Pemain Profesional</span><br>
-<img src="/img/lightning.gif" style="height: 20px; margin-right: 1px"><span class="wa">Proses Cepat</span>
+<img src="/img/verif.gif" style="height: 15px; margin-right: 5px; margin-bottom: 2px"><span class="joki">Dikerjakan Oleh Pemain Profesional</span><br>
+<img src="/img/lightning.gif" style="height: 20px; margin-right: 1px"><span class="joki">Proses Cepat</span>
 </div>
 <!--BADGE END-->
 
@@ -105,37 +105,37 @@
 <!--PRICE LIST-->
 <div class="details-group-example" style="margin-top: 20px; margin-right: 20px; margin-left: 20px;">
   <sl-details class="wa" summary="Lihat Harga" open>
-<img src="/img/epic.png" style="height: 3em"><span class="dona" style="margin-left: 10px"
+<img src="/img/epic.png" style="height: 3em"><span class="merriweather" style="margin-left: 10px"
 >Epic
 <span class="wa" style="float: right; margin-top: 12px; color: yellow">Rp 4.500</span>
 </span><hr>
 
-<img src="/img/legend.png" style="height: 3em"><span class="dona" style="margin-left: 10px"
+<img src="/img/legend.png" style="height: 3em"><span class="merriweather" style="margin-left: 10px"
 >Legends
 <span class="wa" style="float: right; margin-top: 12px; color: yellow">Rp 5.500</span>
 </span><hr>
 
-<img src="/img/mythic.png" style="height: 3em"><span class="dona" style="margin-left: 10px"
+<img src="/img/mythic.png" style="height: 3em"><span class="merriweather" style="margin-left: 10px"
 >Mythic
 <span class="wa" style="float: right; margin-top: 12px; color: yellow">Rp 15.000</span>
 </span><hr>
 
-<img src="/img/mythical-honor.png" style="height: 3em"><span class="dona" style="margin-left: 10px"
+<img src="/img/mythical-honor.png" style="height: 3em"><span class="merriweather" style="margin-left: 10px"
 >Mythical Honor
 <span class="wa" style="float: right; margin-top: 12px; color: yellow">Rp 19.000</span>
 </span><hr>
 
-<img src="/img/mythical-glory.png" style="height: 3em"><span class="dona" style="margin-left: 10px"
+<img src="/img/mythical-glory.png" style="height: 3em"><span class="merriweather" style="margin-left: 10px"
 >Mythical Glory
 <span class="wa" style="float: right; margin-top: 12px; color: yellow">Rp 21.000</span>
 </span><hr>
 
-<img src="/img/mythical-immortal.png" style="height: 3em"><span class="dona" style="margin-left: 10px"
+<img src="/img/mythical-immortal.png" style="height: 3em"><span class="merriweather" style="margin-left: 10px"
 >Mythical Immortal
 <span class="wa" style="float: right; margin-top: 12px; color: yellow">Rp 30.000</span>
 </span><hr>
 
-<img src="/img/mythic.png" style="height: 3em"><span class="dona" style="margin-left: 10px"
+<img src="/img/mythic.png" style="height: 3em"><span class="merriweather" style="margin-left: 10px"
 >Mythic Grading 
 <span class="wa" style="float: right; margin-top: 12px; color: yellow">Rp 150.000</span>
 </span><hr>
@@ -152,12 +152,81 @@
 <!--TAG END-->
 
 <!--FORMAT ORDER-->
+<form onsubmit="sendMessage()">
 <div class="details-group-example" style="margin-top: 20px; margin-right: 20px; margin-left: 20px;">
  <sl-details class="wa" summary="Format Order"open>
-   
+<!--RANK SEKARANG-->
+<h3 class="gothic" style="color: #07B8FE">Rank Sekarang</h3>
+<select class="form-select" aria-label="Default select example" id="sekarang" required>
+<option selected disabled></option>
+  <option value="Epic 5">Epic 5</option>
+  <option value="Epic 4">Epic 4</option>
+  <option value="Epic 3">Epic 3</option>
+  <option value="Epic 2">Epic 2</option>
+  <option value="Epic 1">Epic 1</option>
+  <option value="Legends 5">Legends 5</option>
+  <option value="Legends 4">Legends 4</option>
+  <option value="Legends 3">Legends 3</option>
+  <option value="Legends 2">Legends 2</option>
+  <option value="Legends 1">Legends 1</option>
+<option value="Mythic Romawi">Mythic Romawi</option>
+<option value="Mythical Honor">Mythical Honor</option>
+<option value="Mythical Glory">Mythical Glory</option>
+<option value="Mythical Immortal">Mythical Immortal</option>
+<span class='valid' id='error_ranksekarang'></span>
+</select>
+<!--RANK SEKARANG END-->
+<!--BINTANG SEKARANG-->
+  <div class="mb-3" style="margin-top: 15px">
+    <label for="exampleInputPassword1" class="form-label gothic">Bintang Sekarang</label>
+    <input type="number" class="form-control" id="bintang1" required>
+    <span class='valid' id='error_bintangsekarang'></span>
+  </div>
+<!--BINTANG SEKARANG END-->
+
+<!--RANK TUJUAN-->
+<h3 class="gothic" style="color: #FE9900; margin-top: 35px">Rank Tujuan</h3>
+<select class="form-select" aria-label="Default select example" id="tujuan" required>
+<option selected></option>
+  <option value="Epic 5">Epic 5</option>
+  <option value="Epic 4">Epic 4</option>
+  <option value="Epic 3">Epic 3</option>
+  <option value="Epic 2">Epic 2</option>
+  <option value="Epic 1">Epic 1</option>
+  <option value="Legends 5">Legends 5</option>
+  <option value="Legends 4">Legends 4</option>
+  <option value="Legends 3">Legends 3</option>
+  <option value="Legends 2">Legends 2</option>
+  <option value="Legends 1">Legends 1</option>
+<option value="Mythic Romawi">Mythic Romawi</option>
+<option value="Mythical Honor">Mythical Honor</option>
+<option value="Mythical Glory">Mythical Glory</option>
+<option value="Mythical Immortal">Mythical Immortal</option>
+<span class='valid' id='error_ranktujuan'></span>
+</select>
+<!--RANK TUJUAN END-->
+<!--BINTANG TUJUAN-->
+  <div class="mb-3" style="margin-top: 15px">
+    <label for="exampleInputPassword1" class="form-label gothic">Bintang Tujuan</label>
+    <input type="number" class="form-control" id="bintang2" required="tes">
+  </div>
+<!--BINTANG TUJUAN END-->
+
+<!--BUTTON SEND TO WHATSAPP-->
+  <button type="submit" class="btn btn-primary" style="margin-top: 15px">
+    <i class="bi bi-whatsapp"></i>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="margin-right: 4px; margin-bottom: 5px" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+  <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+</svg><span class="gothic">Order Sekarang</span></button>
+<!--BUTTON SEND TO WHATSAPP END-->
+</form>
   </sl-details>
-</div>
+</div><br>
 <!--FORMAT ORDER END-->
+
+<!--SVG-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,224L17.1,213.3C34.3,203,69,181,103,149.3C137.1,117,171,75,206,53.3C240,32,274,32,309,64C342.9,96,377,160,411,154.7C445.7,149,480,75,514,69.3C548.6,64,583,128,617,160C651.4,192,686,192,720,165.3C754.3,139,789,85,823,85.3C857.1,85,891,139,926,165.3C960,192,994,192,1029,192C1062.9,192,1097,192,1131,170.7C1165.7,149,1200,107,1234,106.7C1268.6,107,1303,149,1337,170.7C1371.4,192,1406,192,1423,192L1440,192L1440,320L1422.9,320C1405.7,320,1371,320,1337,320C1302.9,320,1269,320,1234,320C1200,320,1166,320,1131,320C1097.1,320,1063,320,1029,320C994.3,320,960,320,926,320C891.4,320,857,320,823,320C788.6,320,754,320,720,320C685.7,320,651,320,617,320C582.9,320,549,320,514,320C480,320,446,320,411,320C377.1,320,343,320,309,320C274.3,320,240,320,206,320C171.4,320,137,320,103,320C68.6,320,34,320,17,320L0,320Z"></path></svg>
+<!--SVG END-->
   
 <!--BACK TO TOP-->
   <body style="background-color: rgba(0, 0, 0, 0.832); color: rgb(255, 255, 255);">
@@ -165,6 +234,21 @@
       <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
     </svg></button>
 <!--BACK TO TOP END-->
+
+<!--SCRIPT FUNGSI WA-->
+<script>
+  function sendMessage() {
+    const sekarang = document.getElementById('sekarang').value;
+    const bintang1 = document.getElementById('bintang1').value;
+    const tujuan = document.getElementById('tujuan').value;
+    const bintang2 = document.getElementById('bintang2').value;
+    
+    const url = "https://api.whatsapp.com/send?phone=6283873357108&text=Hallo%20Admin%20Saya%20Mau%20Order%20Joki%0A%0ARank%20saya%20sekarang%20%3A%20*"+ sekarang +"*%0ABintang%20saya%20sekarang%20%3A%20*"+ bintang1 +"*%0A%0AMau%20Order%20Joki%20Ke%20%0ARank%20tujuan%20saya%20%3A%20*"+ tujuan +"*%0ABintang%20tujuan%20saya%20%3A%20*"+ bintang2 +"*"
+    
+    window.open(url);
+  }
+</script>
+<!--SCRIPT FUNGSI WA END-->
   
   <script src="/js/main.js"></script>
 <!-- javascript bundle with popper -->
